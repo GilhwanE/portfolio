@@ -9,7 +9,6 @@ document.addEventListener('scroll', () => {
     }else{
         navbar.classList.remove('navbar--dark');
     }
-
 });
 
 // make contact button when it is on the contact
@@ -21,13 +20,18 @@ navbarmenu.addEventListener('click', (event) => {
     if(link ==null){
         return;
     }
+    scrollIntoView(link);
 
-    console.log(event.target.dataset.link);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth"});
-
-    // const contactme = document.querySelector('.home__contact');
-    // contactme.addEventListener('click', ()=> {
-    //     contactme.scrollIntoView({behavior: "smooth"});
-    // });
 });
+
+// Handle click on "contact me" button on home
+const contactbtn = document.querySelector('.home__contact');
+ contactbtn.addEventListener('click', (event)=> {
+     scrollIntoView('#contact');
+ });
+
+ function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior : "smooth" });
+ }
+ 
