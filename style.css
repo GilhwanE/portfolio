@@ -185,8 +185,8 @@ p{
 .home__contact:hover{
     background-color: var(--color-orange);
     transform: scale(1.1);
+    opacity: 1;
 }
-
 
 /* Section common */
 .section{
