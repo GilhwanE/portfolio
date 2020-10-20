@@ -12,6 +12,7 @@
     --color-gray:#29434e;
     --color-yellow:#ffc400;
     --color-light-gray:#8e8e8e;
+    --color-orange:#ff9100;
 
     
     
@@ -312,7 +313,7 @@ p{
 }
 .category__count{
     display: inline-block;
-    background-color:#ff9100;
+    background-color:var(--color-orange);
     border-radius: 50%;
     color: var(--color-white);
     width: 24px;
@@ -426,8 +427,26 @@ p{
 }
 
 /* Contact */
-
-.contact__links i{
-    background-color: var(--color-dark-white);
+#contact{
+    background-color: var(--color-dark-blue);
+}
+.contact__title,
+.contact__email,
+.contact__right{
+    color: var(--color-white);
 }
 
+.contact__title{
+    margin: 32px 0;
+}
+
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+
+.contact__links i:hover{
+    transform: scale(1.1);
+    color: var(--color-black);
+    animation: all var(--animation-duration);
+}
