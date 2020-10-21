@@ -141,7 +141,7 @@ p{
 .navbar__toggle-btn{
     position: absolute;
     right: 32px;
-    top: 26px;
+    top: 18px;
     font-size: 24px;
     color: var(--color-light-white);
     display: none;
@@ -186,6 +186,7 @@ p{
     background-color: var(--color-orange);
     transform: scale(1.1);
     opacity: 1;
+    transition: var(--animation-duration);
 }
 
 /* Section common */
@@ -481,6 +482,28 @@ p{
     transform: scale(1.1);
     color: var(--color-black);
     animation: all var(--animation-duration);
+}
+
+/*Arrow button  */
+.arrow-up{
+    z-index: 99; /* Make sure it does not overlap */
+    position: fixed;
+    right: 35px;
+    bottom: 30px;
+    pointer-events: none;
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-large);
+    color: var(--color-white);
+    background-color: var(--color-yellow);
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+}
+.arrow-up.visible{
+    opacity: 1;
+    pointer-events: visible;
+}
+.arrow-up:hover{
+    background-color: var(--color-orange);
 }
 
 /* For below 768px screen width */

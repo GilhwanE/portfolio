@@ -43,7 +43,7 @@ contactbtn.addEventListener("mouseenter", ()=>{
     contactbtn.style.opacity = 0.9;
 });
 
-contactbtn.addEventListener("monuseleave",()=>{
+contactbtn.addEventListener("mouseleave",()=>{
     contactbtn.style.opacity = 1-window.scrollY  / homeheight; 
 });
 
@@ -52,3 +52,18 @@ contactbtn.addEventListener("monuseleave",()=>{
     scrollTo.scrollIntoView({ behavior : "smooth" });
  }
 
+
+// When the user scroll down, user get a scroll button
+const arrowUp=document.querySelector(".arrow-up");
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY > homeheight/2){
+        arrowUp.classList.add('visible');
+        }else{
+            arrowUp.classList.remove('visible');
+    }
+});
+
+ // When the user clicks on the button, scroll to the top of the document
+ arrowUp.addEventListener("click", ()=>{
+    scrollIntoView("#home");
+});
