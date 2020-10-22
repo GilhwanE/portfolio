@@ -13,4 +13,4 @@
 
 
 ### 3. canvas image
-![canvas](https://user-images.githubusercontent.com/63918911/96876717-c0b94180-14b3-11eb-9c88-3efffb887ceb.png)
+![canvas](https://user-images.githubusercontent.com/63918911/96881008-c6fdec80-14b8-11eb-846f-baf6df68a4a8.png)
