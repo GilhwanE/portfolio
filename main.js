@@ -47,6 +47,7 @@ contactbtn.addEventListener("mouseleave",()=>{
     contactbtn.style.opacity = 1-window.scrollY  / homeheight; 
 });
 
+// when elements clicked, the element view 
  function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({ behavior : "smooth" });
@@ -63,7 +64,47 @@ document.addEventListener('scroll', ()=>{
     }
 });
 
- // When the user clicks on the button, scroll to the top of the document
+ // When the user click on the button, scroll to the top of the document
  arrowUp.addEventListener("click", ()=>{
     scrollIntoView("#home");
 });
+
+// when the user click the desired category, the corresponding category elements are visble.
+
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e)=> {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
+    projectContainer.classList.add('anim-out');
+    
+    setTimeout(()=>{
+        projectContainer.classList.remove('anim-out');
+    },300);
+    
+    projects.forEach((project) => {
+        if(filter==='*' || filter===project.dataset.type){
+            project.classList.remove('invisible');
+        }else{
+            project.classList.add('invisible');    
+    }
+    });
+});
+
+
+// Get the container element
+
+// const categoryBtn = document.querySelectorAll('.work__categories');
+
+// categoryBtn.forEach((category__btn)=> {
+//     workBtnContainer.addEventListener('click', ()=>
+//     {
+//         categoryBtn.forEach(btn => btn.classList.remove('active'));
+//         this.classList.add('active');
+//     });
+// }); 

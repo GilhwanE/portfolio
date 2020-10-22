@@ -318,6 +318,11 @@ p{
 .work__categories{
     margin: 40px;
 }
+.work__categories.active{
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+
+}
 .category__btn{
     border: 1px solid var(--color-dark-white);
     border-radius: var(--size-border-radius);
@@ -325,6 +330,10 @@ p{
     padding: 8px 48px;
 }
 
+.active, .category__btn:hover{
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+}
 .category__btn.active,
 .category__btn:hover{
     background-color: var(--color-light-blue);
@@ -349,13 +358,20 @@ p{
     top: -20px;
     left: 4px;
     opacity: 0;
-    transition: var(--animation-duration) ease-in;
+    transition: var(--animation-duration) ease-out;
 }
 
 .work__projects{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    transition: all var(--animation-duration) ease-in;
+    opacity: 1;
+}
+
+.work__projects.anim-out{
+    opacity: 0;
+    transform: scale(0.97) translateY(40px);
 }
 
 .project{
@@ -369,6 +385,9 @@ p{
     background-color: var(--color-light-white);
 }
 
+.project.invisible{
+    display: none;
+}
 .project__img{
     max-width: 100%;
     max-height: 100%;
