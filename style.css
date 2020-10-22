@@ -97,10 +97,10 @@ p{
 #navbar{
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    background-color:transparent;
     align-items: center;
     color: var(--color-white);
-    padding: 16px;
+    padding: 10px;
     opacity: 0.8;
     position: fixed;
     width: 100%;
@@ -108,8 +108,8 @@ p{
 }
 
 #navbar.navbar--dark{
-    background-color: var(--color-dark-blue);
-    padding: 8px;
+    background-color: var(--color-blue);
+    padding: 10px;
     transition: all var(--animation-duration) ease-in-out;
 }
 .navbar__menu{
@@ -128,6 +128,7 @@ p{
     cursor: pointer;
     border-radius: var(--size-border-radius);
     border: 1px solid transparent;
+    font-size: var(--font-regular);
 }
 
 .navbar__menu   .navbar__menu__item:hover{
@@ -408,7 +409,7 @@ p{
 
 }
 .project__description h3{
-    color: var(--color-white);
+    color: var(--color-orange);
 }
 
 .project__description h3::after{
@@ -416,9 +417,9 @@ p{
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -522,18 +523,31 @@ p{
 /* For below 768px screen width */
 @media screen and (max-width: 768px ){
     .navbar__toggle-btn{
+        cursor: pointer;
         display: block;
     }
     #navbar{
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-blue);
+        padding: 12px;
+        transition: all var(--animation-duration) ease-in-out;
+    }
+    #navbar.navbar--dark{
+        padding: 12px;
     }
     .navbar__menu{
         flex-direction: column;
         text-align: center;
         width: 100%;
+        opacity: 0.75;
         display: none;
     }
+
+    .navbar__menu.open{
+        display: block;
+    }
+
     .about__majors{
         flex-direction: column;
     }
@@ -552,5 +566,9 @@ p{
     .testimonial__avatar{
         width: 80px;
         height: 80px;
+    }
+    .arrow-up{
+        right: 10.5px;
+        font-size: var(--font-medium);
     }
 }

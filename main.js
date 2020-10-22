@@ -9,6 +9,8 @@ document.addEventListener('scroll', () => {
     }else{
         navbar.classList.remove('navbar--dark');
     }
+    navbarmenu.classList.remove('open');
+
 });
 
 // make contact button when it is on the contact
@@ -23,7 +25,12 @@ navbarmenu.addEventListener('click', (event) => {
     scrollIntoView(link);
 });
 
- // Handle click on "contact me" button on home
+const togglemenu = document.querySelector('.navbar__toggle-btn');
+togglemenu.addEventListener('click', ()=>{
+    navbarmenu.classList.toggle('open');
+})
+
+// Handle click on "contact me" button on home
 const contactbtn = document.querySelector('.home__contact');
  contactbtn.addEventListener('click', (event)=> {
      scrollIntoView('#contact');
