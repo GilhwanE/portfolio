@@ -1,7 +1,7 @@
 # portfolio
  Hwan's portfolio
 
-URL : https://giljape.github.io/portfolio/
+URL : https://GilhwanE.github.io/portfolio/
 
 <!-- 
 ### 1. Home image
