@@ -13,4 +13,10 @@ URL : https://GilhwanE.github.io/portfolio/
 
 
 ### 3. canvas image
-![canvas](https://user-images.githubusercontent.com/63918911/96881008-c6fdec80-14b8-11eb-846f-baf6df68a4a8.png) -->
+![canvas](https://user-images.githubusercontent.com/63918911/96881008-c6fdec80-14b8-11eb-846f-baf6df68a4a8.png) 
+
+### 4. movie image
+![movie_phone](https://user-images.githubusercontent.com/63918911/97980311-ea5b5c80-1e13-11eb-9303-dd7d460bd2e5.PNG)
+
+-->
+
