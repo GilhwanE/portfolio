@@ -608,7 +608,6 @@ p{
     .project{
         flex-grow: 1;
     }
-
     .testimonial{
         flex-direction: column;
         align-items: center;
