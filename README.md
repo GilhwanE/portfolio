@@ -3,6 +3,13 @@
 
 URL : https://GilhwanE.github.io/portfolio/
 
+<hr>
+
+### 1 site view
+![poto_1](https://user-images.githubusercontent.com/63918911/99237185-7ec5b600-283b-11eb-9924-6580cb26a758.PNG)
+
+### 2 view
+
 <!-- 
 ### 1. Home image
 ![home](https://user-images.githubusercontent.com/63918911/96884384-696b9f00-14bc-11eb-99c7-5d391e2b2103.png)
