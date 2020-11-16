@@ -9,6 +9,7 @@ URL : https://GilhwanE.github.io/portfolio/
 ![poto_1](https://user-images.githubusercontent.com/63918911/99237185-7ec5b600-283b-11eb-9924-6580cb26a758.PNG)
 
 ### 2 view
+![2](https://user-images.githubusercontent.com/63918911/99237382-b896bc80-283b-11eb-947c-1c9744b098d6.PNG)
 
 <!-- 
 ### 1. Home image
