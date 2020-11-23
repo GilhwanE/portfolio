@@ -109,7 +109,7 @@ p{
 
 #navbar.navbar--dark{
     background-color: var(--color-blue);
-    padding: 2pxx;
+    padding: 2px;
     transition: all var(--animation-duration) ease-in-out;
 }
 .navbar__menu{
