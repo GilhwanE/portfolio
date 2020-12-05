@@ -160,9 +160,7 @@ const observerCallback = (entries, observer) => {
         if(!entry.isIntersecting && entry.intersectionRatio > 0){
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             //스크룰링 아래로 되어서 페이지가 올라옴
-            if(entry.boundingClientRect.y < 0){
-                console.log(entry);
-                
+            if(entry.boundingClientRect.y < 0){                
                 selectedNavIndex = index + 1;
             } else{
                 selectedNavIndex = index - 1;
@@ -173,3 +171,7 @@ const observerCallback = (entries, observer) => {
 
 const observer = new IntersectionObserver(observerCallback,observerOptions);
 sections.forEach(section => observer.observe(section));
+
+window.addEventListener('scroll', () =>  {
+    selectNavItem(navItems[selectedNavIndex]);
+})
