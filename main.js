@@ -151,7 +151,6 @@ const observerOptions = {
 const observerCallback = (entries, observer) => {
     entries.forEach(entry=>{
         console.log(entry.target);
-        
     });
 };
 
