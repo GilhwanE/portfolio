@@ -10,6 +10,7 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
     navbarmenu.classList.remove('open');
+    
 
 });
 
@@ -22,6 +23,7 @@ navbarmenu.addEventListener('click', (event) => {
     if(link ==null){
         return;
     }
+    navbarmenu.classList.remove('open');
     scrollIntoView(link);
 });
 
@@ -53,13 +55,6 @@ contactbtn.addEventListener("mouseenter", ()=>{
 contactbtn.addEventListener("mouseleave",()=>{
     contactbtn.style.opacity = 1-window.scrollY  / homeheight; 
 });
-
-// when elements clicked, the element view 
- function scrollIntoView(selector){
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({ behavior : "smooth" });
- }
-
 
 // When the user scroll down, user get a scroll button
 const arrowUp=document.querySelector(".arrow-up");
@@ -149,10 +144,17 @@ function selectNavItem(selected) {
     selectedNavItem.classList.add('active');
 }
 
+// when elements clicked, the element view 
+ function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior : "smooth" });
+    selectedNavItem(navItems[sectionIds.indexOf(selector)]);
+ }
+
 const observerOptions = {
-    root :null,
+    root: null,
     rootMargin: '0px',
-    threshold:0.3,
+    threshold: 0.3,
 }
 
 const observerCallback = (entries, observer) => {
@@ -176,7 +178,8 @@ window.addEventListener('scroll', () =>  {
     if(window.scrollY === 0) {
         selectedNavIndex = 0;
     } else if(
-        window.scrollY + window.innerHeight === document.body.clientHeight){ //가장밑으로
+        Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight){ 
+            //가장 밑으로
             selectedNavIndex = navItems.length -1;
         }
     selectNavItem(navItems[selectedNavIndex]);
