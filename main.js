@@ -176,7 +176,7 @@ window.addEventListener('scroll', () =>  {
     if(window.scrollY === 0) {
         selectedNavIndex = 0;
     } else if(
-        window.scrollY + window.innerHeight ===document.body.clientHeight){
+        window.scrollY + window.innerHeight === document.body.clientHeight){ //가장밑으로
             selectedNavIndex = navItems.length -1;
         }
     selectNavItem(navItems[selectedNavIndex]);
