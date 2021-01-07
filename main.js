@@ -174,7 +174,7 @@ const observerCallback = (entries, observer) => {
 const observer = new IntersectionObserver(observerCallback,observerOptions);
 sections.forEach(section => observer.observe(section));
 
-window.addEventListener('mouseup', () =>  {
+window.addEventListener('scroll', () =>  {
     if(window.scrollY === 0) {
         selectedNavIndex = 0;
     } else if(
