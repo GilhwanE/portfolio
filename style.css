@@ -1,5 +1,4 @@
 /* Global */
-
 :root{
     /* Color */
     --color-white:#ffffff;
@@ -14,8 +13,6 @@
     --color-light-gray:#8e8e8e;
     --color-orange:#ff9100;
 
-    
-    
     /* Font-size */
     --font-large: 48px;
     --font-medium: 28px;
@@ -109,7 +106,6 @@ p{
 
 #navbar.navbar--dark{
     background-color: var(--color-blue);
-    padding: 2px;
     transition: all var(--animation-duration) ease-in-out;
 }
 .navbar__menu{
