@@ -25,6 +25,8 @@ navbarmenu.addEventListener('click', (event) => {
     }
     navbarmenu.classList.remove('open');
     scrollIntoView(link);
+    selectNavItem(target);
+
 });
 
 const togglemenu = document.querySelector('.navbar__toggle-btn');
@@ -124,16 +126,16 @@ workBtnContainer.addEventListener('click', (e)=> {
 // 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킴
 
-const sectionIds = [
+const sectionIds = [  //id값을 가지고 있는 배열 변수를 만든다. 
     '#home',
     '#about',
     '#skills',
     '#work',
     '#contact',
 ];
-
+//map 하나하나 돌면서 
 const sections = sectionIds.map(id => document.querySelector(id));
-const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`)); //모든 요소들 받아오기
 
 let selectedNavIndex = 0;
 let selectedNavItem = navItems[0];
@@ -152,14 +154,14 @@ function selectNavItem(selected) {
  }
 
 const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.3,
+    root: null, //내가 어떤걸 기준으로 보여줄지 null이면 viewport
+    rootMargin: '0px', //
+    threshold: 0.3, //얼마만큼 보여줘야 콜벡함수를 호출할지
 }
 
-const observerCallback = (entries, observer) => {
-    entries.forEach(entry=>{
-        if(!entry.isIntersecting && entry.intersectionRatio > 0){
+const observerCallback = (entries, observer) => {   
+    entries.forEach(entry => {
+        if(!entry.isIntersecting && entry.intersectionRatio > 0){  //isIntersecting : 들어오는 상태 , intersectionRatio : 얼마나 들어와있는지 (전부면1)
             const index = sectionIds.indexOf(`#${entry.target.id}`);
             //스크룰링 아래로 되어서 페이지가 올라옴
             if(entry.boundingClientRect.y < 0){                
@@ -170,16 +172,16 @@ const observerCallback = (entries, observer) => {
         }
     });
 };
+//observer 생성 후 요소 관찰
+const observer = new IntersectionObserver(observerCallback,observerOptions);    //전달함
+sections.forEach(section => observer.observe(section)); //observer 특정요소가 들어오고 나갈때 콜백함수를 호출
 
-const observer = new IntersectionObserver(observerCallback,observerOptions);
-sections.forEach(section => observer.observe(section));
-
-window.addEventListener('scroll', () =>  {
-    if(window.scrollY === 0) {
+window.addEventListener('wheel', () =>  {
+    if(window.scrollY === 0) { //페이지 가장 위에 있을때 
         selectedNavIndex = 0;
     } else if(
         Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight){ 
-            //가장 밑으로
+            //가장 밑으로   
             selectedNavIndex = navItems.length -1;
         }
     selectNavItem(navItems[selectedNavIndex]);
