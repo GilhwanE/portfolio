@@ -8,7 +8,8 @@ URL : https://GilhwanE.github.io/portfolio/
 웹페이지 구성
 Tab 메뉴, profile
 
-### 1 profile
+## 1 profile
+-Tab menu, 사진 , 한줄소개
 ![poto_1](https://user-images.githubusercontent.com/63918911/99237185-7ec5b600-283b-11eb-9924-6580cb26a758.PNG)
 ### 2 About me
 ![2](https://user-images.githubusercontent.com/63918911/99237382-b896bc80-283b-11eb-947c-1c9744b098d6.PNG)
