@@ -5,6 +5,9 @@ URL : https://GilhwanE.github.io/portfolio/
 
 <hr>
 
+웹페이지 구성
+Tab 메뉴, profile
+
 ### 1 site view
 ![poto_1](https://user-images.githubusercontent.com/63918911/99237185-7ec5b600-283b-11eb-9924-6580cb26a758.PNG)
 
