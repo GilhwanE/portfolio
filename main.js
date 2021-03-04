@@ -13,9 +13,8 @@ document.addEventListener('scroll', () => {
     
 
 });
-
-// make contact button when it is on the contact
-// Handle scrolling when tapping on the navbar menu
+//make contaact butto when it is on the contact
+// Handle scrolling when tapping on the nabar menu
 const navbarmenu = document.querySelector('.navbar__menu');
 navbarmenu.addEventListener('click', (event) => {
     const target = event.target;
