@@ -5,9 +5,15 @@ URL : https://GilhwanE.github.io/portfolio/
 
 <hr>
 
-웹페이지 구성
-Tab 메뉴, profile
+### 웹페이지 구성
+Tap menu, about, skills, my work, contact
+<hr>
+### Skill stack
+HTML
+CSS
+JS
 
+<hr>
 ## 1 profile
 -Tab menu, 사진 , 한줄소개
 contact button click시 contact menu로 이동
