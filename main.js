@@ -10,9 +10,8 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
     navbarmenu.classList.remove('open');
-    
-
 });
+
 //make contaact butto when it is on the contact
 // Handle scrolling when tapping on the nabar menu
 const navbarmenu = document.querySelector('.navbar__menu');
@@ -25,7 +24,6 @@ navbarmenu.addEventListener('click', (event) => {
     navbarmenu.classList.remove('open');
     scrollIntoView(link);
     selectNavItem(target);
-
 });
 
 const togglemenu = document.querySelector('.navbar__toggle-btn');
@@ -37,7 +35,6 @@ togglemenu.addEventListener('click', ()=>{
 const contactbtn = document.querySelector('.home__contact');
  contactbtn.addEventListener('click', (event)=> {
      scrollIntoView('#contact');
-
  });
 
  // 스크롤 내릴때 home컨텐츠내용 점점 흐려지게 하는것
@@ -99,7 +96,7 @@ workBtnContainer.addEventListener('click', (e)=> {
     },300);
     
     projects.forEach((project) => {
-        if(filter==='*' || filter===project.dataset.type){
+        if(filter === '*' || filter === project.dataset.type){
             project.classList.remove('invisible');
         }else{
             project.classList.add('invisible');    
@@ -158,7 +155,7 @@ const observerOptions = {
     threshold: 0.3, //얼마만큼 보여줘야 콜벡함수를 호출할지
 }
 
-const observerCallback = (entries, observer) => {   
+const observerCallback = (entries, observer) => {   //요소 활성화
     entries.forEach(entry => {
         if(!entry.isIntersecting && entry.intersectionRatio > 0){  //isIntersecting : 들어오는 상태 , intersectionRatio : 얼마나 들어와있는지 (전부면1)
             const index = sectionIds.indexOf(`#${entry.target.id}`);
@@ -172,8 +169,8 @@ const observerCallback = (entries, observer) => {
     });
 };
 //observer 생성 후 요소 관찰
-const observer = new IntersectionObserver(observerCallback,observerOptions);    //전달함
-sections.forEach(section => observer.observe(section)); //observer 특정요소가 들어오고 나갈때 콜백함수를 호출
+const observer = new IntersectionObserver(observerCallback,observerOptions);    //전달함 관찰자를 만들었으니까 이제 관찰해야함
+sections.forEach(section => observer.observe(section)); //우리의 sections들을 관찰 / observer 특정요소가 들어오고 나갈때 콜백함수를 호출 
 
 window.addEventListener('wheel', () =>  {
     if(window.scrollY === 0) { //페이지 가장 위에 있을때 
@@ -184,4 +181,4 @@ window.addEventListener('wheel', () =>  {
             selectedNavIndex = navItems.length -1;
         }
     selectNavItem(navItems[selectedNavIndex]);
-})
+});
