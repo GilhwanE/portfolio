@@ -12,13 +12,13 @@ document.addEventListener('scroll', () => {
     navbarmenu.classList.remove('open');
 });
 
-//make contaact butto when it is on the contact
+//make contaact button when it is on the contact
 // Handle scrolling when tapping on the nabar menu
 const navbarmenu = document.querySelector('.navbar__menu');
 navbarmenu.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
-    if(link ==null){
+    if(link == null){
         return;
     }
     navbarmenu.classList.remove('open');
