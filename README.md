@@ -13,7 +13,6 @@ CSS
 JS
 
 
-<hr>
 ## 1 profile
 -Tab menu, 사진 , 한줄소개
 contact button click시 contact menu로 이동
