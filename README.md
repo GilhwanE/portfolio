@@ -12,19 +12,26 @@ URL : https://GilhwanE.github.io/portfolio/
 
 
 ## 1 profile
--Tab menu, 사진 , 한줄소개
-contact button click시 contact menu로 이동
+- Tab menu, 사진 , 한줄소개
+ contact button click시 contact menu로 이동
 <hr>
+<img src="https://user-images.githubusercontent.com/63918911/99237185-7ec5b600-283b-11eb-9924-6580cb26a758.PNG" />
 
-![poto_1](https://user-images.githubusercontent.com/63918911/99237185-7ec5b600-283b-11eb-9924-6580cb26a758.PNG)
 ### 2 About me
-![2](https://user-images.githubusercontent.com/63918911/99237382-b896bc80-283b-11eb-947c-1c9744b098d6.PNG)
+<hr> 
+<img src="https://user-images.githubusercontent.com/63918911/99237382-b896bc80-283b-11eb-947c-1c9744b098d6.PNG" />
+
 ### 3 Skills
-![skills](https://user-images.githubusercontent.com/63918911/108031915-f5f62a80-7074-11eb-8803-423b7a8c0269.PNG)
+<hr>
+<img src="https://user-images.githubusercontent.com/63918911/108031915-f5f62a80-7074-11eb-8803-423b7a8c0269.PNG" />
+
 ### 4 my work
-![my work](https://user-images.githubusercontent.com/63918911/108031912-f55d9400-7074-11eb-911e-88e6bbf417ad.PNG)
+<hr>
+<img src="https://user-images.githubusercontent.com/63918911/108031912-f55d9400-7074-11eb-911e-88e6bbf417ad.PNG" />
+
 ### 5 contact
-![contact](https://user-images.githubusercontent.com/63918911/108031908-f42c6700-7074-11eb-9e45-3a8a78fb1c50.PNG)
+<hr>
+<img src="https://user-images.githubusercontent.com/63918911/108031908-f42c6700-7074-11eb-9e45-3a8a78fb1c50.PNG" />
 
 <!-- 
 ### 1. Home image
