@@ -8,9 +8,7 @@ URL : https://GilhwanE.github.io/portfolio/
 ### 웹페이지 구성
 - Tap menu, about, skills, my work, contact
 ### Skill stack
-HTML
-CSS
-JS
+- HTML CSS JS
 
 
 ## 1 profile
