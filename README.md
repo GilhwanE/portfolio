@@ -6,7 +6,7 @@ URL : https://GilhwanE.github.io/portfolio/
 <hr>
 
 ### 웹페이지 구성
-Tap menu, about, skills, my work, contact
+- Tap menu, about, skills, my work, contact
 ### Skill stack
 HTML
 CSS
